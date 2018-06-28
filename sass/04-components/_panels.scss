@@ -1,0 +1,22 @@
+// /////////////////////////
+// @@ PANELS
+// ////////////////////////
+
+.panel {
+  margin: 0 auto;
+  background: $white;
+  box-shadow: 0 4px 8px 0 rgba($black-gunmetal, 0.1), 0 6px 20px 0 rgba($black-gunmetal, 0.1);
+
+  &__inner {
+    padding: 2rem;
+  }
+  &--small {
+    width: 30rem;
+  }
+
+  &--taller {
+    width: 39rem;
+  }
+}
+
+

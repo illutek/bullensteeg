@@ -6,5 +6,47 @@
 .header {
   background: $green-main;
   color: $white;
+  padding-bottom: 5rem;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 5rem;
+    padding: 0 2rem;
+  }
+
+  &__menu {
+
+  }
+
+  &__slogan {
+    max-width: 46rem;
+    margin: 4rem 0 6rem;
+  }
+
+  &__cta {
+
+  }
+
+  &__slogan-sub {
+    margin: 4rem 0;   
+    font-size: calc(#{$base-font-size} - .4rem);
+  }
+
+  &__contact {
+    width: 100%;
+    background: $green-lighter;
+    padding: 4rem;
+    line-height: 3rem;
+
+  }
+
+}
+
+// TODO Component?
+.site__name {
+
 }
 

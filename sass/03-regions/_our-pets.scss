@@ -1,0 +1,23 @@
+// /////////////////////////
+// @@ TEVEN
+// ////////////////////////
+
+.our-pets {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 3rem auto;
+  grid-template-areas: 
+    "teven"
+    "."
+    "reuen";
+
+  &__teven {
+    grid-area: teven;
+
+  }
+
+  &__reuen {
+    grid-area: reuen;
+
+  }
+}

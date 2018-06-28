@@ -1,0 +1,12 @@
+// /////////////////////////
+// @@ BUTTONS
+// ////////////////////////
+
+.btn {
+  padding: 2rem 3rem;
+  display: inline-block;
+
+  &--green {
+    background: $green-lighter;
+  }
+}

@@ -1,0 +1,15 @@
+core: 8.x
+type: theme
+version: 1.0.0
+base theme: classy
+ 
+name: 'Bullensteeg'
+description: 'Bullensteeg Franse bulldoggen'
+
+regions:
+  content: Content
+
+
+libraries:
+  - bullensteeg/globalstyle
+  - bullensteeg/fonts
