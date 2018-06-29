@@ -1,0 +1,19 @@
+// /////////////////////////
+// @@ READ MORE 
+// ////////////////////////
+
+.read-more {
+  margin: 4rem 0 0;
+  display: inline-block;
+
+  &__link {
+    &::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: $green-lighter;
+    }
+    
+  }
+}

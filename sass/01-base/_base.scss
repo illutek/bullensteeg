@@ -23,7 +23,7 @@ body {
   background: $white_anti-flash;
 }
 
-p {
+p:not(:last-of-type) {
   margin-bottom: 2rem;
 }
 
@@ -39,5 +39,6 @@ a {
 }
 
 img {
-  min-width: 100%;
+  width: 100%;
+  height: auto;
 }

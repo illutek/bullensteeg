@@ -2,7 +2,6 @@
 // @@ HEADER FRONTPAGE
 // ////////////////////////
 
-
 .header {
   background: $green-main;
   color: $white;
@@ -35,18 +34,4 @@
     font-size: calc(#{$base-font-size} - .4rem);
   }
 
-  &__contact {
-    width: 100%;
-    background: $green-lighter;
-    padding: 4rem;
-    line-height: 3rem;
-
-  }
-
 }
-
-// TODO Component?
-.site__name {
-
-}
-

@@ -1,0 +1,17 @@
+// /////////////////////////
+// @@ CONTACT DETAILS
+// ////////////////////////
+
+.contact-details {
+  padding: 4rem;
+  line-height: 3rem;
+
+  &--green {
+    background: $green-lighter;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+  
+}

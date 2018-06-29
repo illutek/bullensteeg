@@ -25,13 +25,11 @@ body {
 
 .site__name {
   text-transform: uppercase;
-}
 
-
-.header {
-
-  &__slogan {
-
+  &--small {
+    font-size: calc(#{$base-font-size} - .2rem);
+    &::after {
+      content: " --";
+    }
   }
-
 }
