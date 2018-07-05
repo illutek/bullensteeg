@@ -10,4 +10,11 @@
     background: $green-lighter;
     color: white;
   }
+
+  &--more-padding {
+    @include respond(desktop) {
+      padding: 2rem 8rem;
+    }
+  }
+
 }
