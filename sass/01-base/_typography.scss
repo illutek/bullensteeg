@@ -16,6 +16,17 @@ body {
 .heading-first {
   font-size: 4.2rem;
   line-height: 5rem;
+
+  @include respond(desktop) {
+    line-height: 7rem;
+    @include responsive-font(3.5vw, 6rem, 7rem);
+  }
+
+  @include respond(big-desktop) {
+    line-height: 9rem;
+    @include responsive-font(3.5vw, 5rem, 7rem);
+  }
+
 }
 
 .heading-second {

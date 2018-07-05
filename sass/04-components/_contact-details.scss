@@ -3,8 +3,13 @@
 // ////////////////////////
 
 .contact-details {
+  grid-area: contact;
   padding: 4rem;
   line-height: 3rem;
+
+  @include respond(tablet) {
+    display: none;
+  }
 
   &--green {
     background: $green-lighter;

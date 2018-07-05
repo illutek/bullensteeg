@@ -16,22 +16,81 @@
     padding: 0 2rem;
   }
 
-  &__menu {
 
+
+  &__main {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template: 
+      "." 
+      "slogan"
+      "cta"
+      "slogan-sub"
+      "contact";
+
+    @include respond(tablet) {
+      grid-template: 
+      ".";
+
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+
+  &__img {
+    grid-area: header-img;
+    margin-bottom: 3rem;
+    display: none;
+
+    @include respond(tablet) {
+      display: block;
+      grid-column: 2 / -1;
+      grid-row: 1 / 3;
+    }
   }
 
   &__slogan {
-    max-width: 46rem;
+    grid-area: slogan;
     margin: 4rem 0 6rem;
+    // max-width: 50vw;
+
+    @include respond(tablet) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+
+    @include respond(desktop) {
+      max-width: 65vw;
+    }
+
+    @include respond(desktop) {
+      max-width:48vw;
+    }
   }
 
   &__cta {
+    grid-area: cta;
+
+    @include respond(tablet) {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }
 
   }
 
+
   &__slogan-sub {
+    grid-area: slogan-sub;
     margin: 4rem 0;   
     font-size: calc(#{$base-font-size} - .4rem);
+
+    @include respond(tablet) {
+      margin: 1rem 0;
+      grid-column: 1 / 4;
+      grid-row: 3 / 4;
+    }
   }
 
 }
