@@ -11,6 +11,12 @@
     "."
     "reuen";
 
+  @include respond(desktop) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "teven reuen";
+  }
+
   &__teven {
     grid-area: teven;
 
