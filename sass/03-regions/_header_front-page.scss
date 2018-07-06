@@ -6,6 +6,7 @@
   background: $green-main;
   color: $white;
   padding-bottom: 5rem;
+  z-index: -1;
 
   &__top {
     display: flex;
@@ -38,7 +39,7 @@
       ".";
 
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4, auto);
+      grid-template-rows: repeat(4, auto) 10rem;
     }
   }
 
