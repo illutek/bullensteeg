@@ -1,0 +1,32 @@
+// //////////////////////////////
+// @@ NAVIGATION  
+// //////////////////////////////
+
+.navigation {
+
+
+  &__nav--desktop {
+    display: none;
+
+    @include respond(desktop) {
+      display: block;
+    }
+  }
+
+  &__item--desktop {
+    display: block;
+    float: left;
+    &:not(:last-of-type) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link--desktop {
+    color: $white_anti-flash;
+
+    &:hover {
+      color: $green-lighter;
+    }
+  }
+  
+}

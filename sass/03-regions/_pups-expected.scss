@@ -15,7 +15,7 @@
   }
 
   &__wrapper {
-    padding: 0 4rem 6rem;
+    padding: 0 3rem 6rem;
 
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@
 
   &__title {
     margin: 3rem 0 5rem;
-    font-size: calc(#{$base-font-size} + 4.2rem);
+    font-size: calc(#{$base-font-size} + 3.2rem);
     line-height: 5rem;
   }
 

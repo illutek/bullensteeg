@@ -23,7 +23,6 @@ body {
   }
 
   @include respond(big-desktop) {
-    line-height: 9rem;
     @include responsive-font(3.5vw, 5rem, 7rem);
   }
 

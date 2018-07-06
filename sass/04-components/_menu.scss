@@ -6,8 +6,8 @@
     display: none;
   }
   &__button {
-    background-color: transparent;
-    height: 7rem;
+    background-color: $green-main;
+    height: 6rem;
     width: 7rem;
     position: fixed;
     top: 0;
@@ -15,6 +15,10 @@
     z-index: 190;
     text-align: center;
     cursor: pointer;
+
+    @include respond(desktop) {
+      display: none;
+    }
   }
 
   &__background {
@@ -51,7 +55,7 @@
   }
 
   &__checkbox:checked ~ &__background {
-    transform: scale(150);
+    transform: scale(210);
     background: $black_gunmetal;
     height: 100vh;
   }
