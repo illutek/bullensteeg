@@ -3,28 +3,19 @@
 // ////////////////////////
 
 .pups-expected {
-  margin: 8rem auto;
-
-  &__img {
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  &__wrapper {
-    padding: 0 3rem 6rem;
-
-    display: flex;
-    flex-direction: column;
-  }
 
   &__title {
     margin: 3rem 0 5rem;
     font-size: calc(#{$base-font-size} + 3.2rem);
     line-height: 5rem;
+  }
+
+  &__teaser-content {
+    display: none;
+
+    @include respond(desktop) {
+      display: block;
+    }
   }
 
 }
