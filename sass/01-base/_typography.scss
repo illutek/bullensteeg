@@ -3,14 +3,16 @@
 // ////////////////////////
 
 body {
-  font-family: "Archivo", sans-serif;
+  font-family: $font-family;
+  font-weight: 400;
   font-size: 1.8rem;
   color: $black_gunmetal;
   line-height: 2.5rem;
 }
 
 .heading {
-  font-family: "Archivo Black", sans-serif;
+  font-family: $font-family;
+  font-weight: 900;
 }
 
 .heading-first {
