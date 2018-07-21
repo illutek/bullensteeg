@@ -13,14 +13,17 @@
     align-items: center;
     justify-content: space-between;
 
-    height: 5rem;
+    height: 6rem;
 
     @include respond(tablet) {
       height: 7rem;
     }
   }
 
-
+  &--page {
+    padding-bottom: 0rem;
+    height: 6rem;
+  }
 
   &__main {
 

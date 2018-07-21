@@ -1,0 +1,33 @@
+// /////////////////////////
+// @@ OUR PUPS
+// ////////////////////////
+
+.our-pups {
+  width: 80vw;
+  margin: 2rem auto 8rem;
+  background: $white;
+  box-shadow: $panel-shadow;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+
+  &__img-wrap {
+    grid-row: 1 / 2;
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  &__text {
+    padding: 2rem;
+    grid-row: 2 / -1;
+  }
+
+  &__bcg {
+    display: none;
+
+  }
+
+}
