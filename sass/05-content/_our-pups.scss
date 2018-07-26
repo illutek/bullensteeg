@@ -12,8 +12,8 @@
 
   @include respond(desktop) {
     width: 100vw;
-    grid-template-columns: minmax(10vw, 19vw) minmax(10vw, 15vw) minmax(25vw, 50vw) minmax(1vw, auto);
-    grid-template-rows: minmax(5vw, 7vw) minmax(5vw, 7vw) auto;
+    grid-template-columns: minmax(10vw, 15vw) minmax(10vw, 25vw) minmax(25vw, 50vw) minmax(1vw, auto);
+    grid-template-rows: minmax(5vw, 7vw) minmax(5vw, 10vw) auto;
   }
 
   &__img-wrap {
@@ -55,12 +55,20 @@
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 
-    &-content {
+    &-content-wrap {
       width: 100%;
 
       @include respond(desktop) {
-        width: 50vw;
+        width: 60vw;
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 2rem;
       }
+    }
+
+    &-content-title {
+      align-self: center;
     }
 
     @include respond(desktop) {
