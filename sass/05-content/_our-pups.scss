@@ -80,11 +80,6 @@
   }
 
   &__bcg {
-    display: block;
-    background: $white;
-    box-shadow: $panel-shadow;
-    z-index: -1;
-
     grid-column: 1 / -1;
     grid-row: 2 / -1;
 

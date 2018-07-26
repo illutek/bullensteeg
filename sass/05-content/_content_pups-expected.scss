@@ -1,0 +1,40 @@
+// /////////////////////////////
+// @@ CONTENT PUPS EXPECTED 
+// ////////////////////////////@include
+
+.pups-expected-content {
+  width: 80vw;
+  margin: 8rem auto;
+
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+
+  &__title {
+    text-align: center;
+    padding-top: 4rem;
+
+    grid-column: 2 / 3;
+    grid-row: 1 /2;
+  }
+
+  &__img {
+
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  &__body {
+    padding: 3rem 0;
+
+    grid-column: 2 / 3;
+    grid-row: 3 / -1;
+  }
+
+  &__bcg {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+}
