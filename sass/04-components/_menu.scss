@@ -166,6 +166,10 @@
   &__site-name {
     text-transform: uppercase;
     grid-area: site-name;
+
+    @include respond(phone) {
+      align-self: start;
+    }
   }
 
   &__site-avatar {
@@ -176,6 +180,7 @@
 
     @include respond(phone) {
       width: 45%;
+      align-self: end;
     }
   }
 
