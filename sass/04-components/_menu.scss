@@ -43,26 +43,44 @@
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     display: grid;
-
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto) 5rem;
     grid-template-areas:
       "nav-items"
       "nav-branding"
       "nav-footer";
+
+    @include respond(phone) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 5rem;
+      grid-template-areas: 
+        "nav-items nav-branding"
+        "nav-footer nav-footer";
+    }
   }
 
   &__branding {
     width: 90vw;
     margin: 0 auto;
+    
     grid-area: nav-branding;
 
     display: grid;
     grid-template-columns: minmax(20vw, 25vw) 1fr;
     grid-template-rows: 1fr;
+    grid-template-areas: 
+      "site-avatar site-name";
     grid-gap: 2rem;
     align-items: center;
     justify-items: center;
+
+    @include respond(phone) {
+      grid-template-columns: 50vw;
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: 
+        "site-avatar"
+        "site-name";
+    }
   }
 
   &__footer {
@@ -74,6 +92,11 @@
     grid-area: nav-footer;
     align-self: center;
 
+    @include respond(phone) {
+      width: 100vw;
+      margin: 0;
+    }
+
     &::after {
       content: "";
       width: 100%;
@@ -82,6 +105,11 @@
       left: 0;
       top: 50%;
       z-index: 1;
+
+      @include respond(phone) {
+        width: 90%;
+        left: 5%;
+      }
     }
 
     &-link {
@@ -129,18 +157,25 @@
 
     display: flex;
     align-items: center;
+
+    @include respond(phone) {
+      justify-content: center;
+    }
   }
 
   &__site-name {
     text-transform: uppercase;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    grid-area: site-name;
   }
 
   &__site-avatar {
+    grid-area: site-avatar;
     img {
       border-radius: 50%;
+    }
+
+    @include respond(phone) {
+      width: 45%;
     }
   }
 
