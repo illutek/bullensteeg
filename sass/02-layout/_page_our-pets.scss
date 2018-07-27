@@ -1,0 +1,66 @@
+// /////////////////////////
+// @@ PAGE OUR PETS
+// ////////////////////////
+
+.our-pets {
+  &__container {
+    margin: 6rem 0 8rem;
+  }
+}
+
+.section-our-pets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 5rem;
+}
+
+.pet-panel {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: repeat(2, auto) 0rem;
+  grid-row-gap: 2rem;
+  grid-template-areas: 
+    "image image image"
+    ". body ."
+    ". . .";
+
+  &__image {
+    grid-area: image;
+
+    img {
+      display: block;
+    }
+
+  }
+
+  &__body {
+    grid-area: body;
+    align-self: end;
+
+    &-name {
+      text-transform: uppercase;
+      padding-bottom: 1rem;
+
+    }
+
+    &-born-on {
+      font-size: $font-size-smaller;
+      padding-bottom: 1rem;
+
+    }
+
+    &-readmore {
+      display: block;
+      font-size: $font-size-small;
+
+    }
+
+  }
+
+  &__bcg {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+
+  }
+}

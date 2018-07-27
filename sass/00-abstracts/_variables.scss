@@ -14,6 +14,8 @@ $gray-spanish: #969A97;
 // FONTS
 $font-family: "Montserrat", sans-serif;
 $base-font-size: 1.8rem;
+$font-size-small: calc(#{$base-font-size} - .3rem);
+$font-size-smaller: calc(#{$base-font-size} - .6rem);
 $heading-first: 6rem;
 $heading-second: 3.2rem;
 

@@ -19,6 +19,7 @@
     padding: 4rem 0;
     grid-template-columns: minmax(5vw, 10vw) repeat(2, minmax(25vw, 40vw)) minmax(5vw, 10vw);
     grid-template-rows: repeat(2, auto);
+    grid-gap: 2rem;
     grid-template-areas: 
       ". title body ."
       ". title images .";
