@@ -11,7 +11,7 @@ body {
 }
 
 .heading {
-  font-family: $font-family;
+  font-family: $font-family--heading;
   font-weight: 900;
 }
 
@@ -40,6 +40,10 @@ body {
       @include responsive-font(2.8vw, 4rem, 5rem);
     }
   }
+}
+
+.heading-third {
+  font-size: 2rem;
 }
 
 .site__name {

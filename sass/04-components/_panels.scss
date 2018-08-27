@@ -14,9 +14,7 @@
 
     display: flex;
     flex-direction: column;
-    
   }
-
 }
 
 .panel-wide {
@@ -59,7 +57,6 @@
 
     padding: 0 3rem 6rem;
 
-
     @include respond(desktop) {
       grid-column: 3 / -1;
       grid-row: 2 / -1;
@@ -67,10 +64,9 @@
       padding: 2rem 3rem 8rem;
       align-self: center;
     }
-    
+
     display: flex;
     flex-direction: column;
-
   }
 
   &__bcg {

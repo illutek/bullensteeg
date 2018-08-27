@@ -5,12 +5,13 @@
 .our-pets {
   &__container {
     margin: 6rem 0 8rem;
+    min-height: 37vw;
   }
 }
 
 .section-our-pets {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 5rem;
 }
@@ -20,7 +21,7 @@
   grid-template-columns: 10% 80% 10%;
   grid-template-rows: repeat(2, auto) 0rem;
   grid-row-gap: 2rem;
-  grid-template-areas: 
+  grid-template-areas:
     "image image image"
     ". body ."
     ". . .";
@@ -31,36 +32,36 @@
     img {
       display: block;
     }
-
   }
 
   &__body {
+    margin-bottom: 2rem;
+
     grid-area: body;
     align-self: end;
 
     &-name {
       text-transform: uppercase;
       padding-bottom: 1rem;
-
     }
 
     &-born-on {
       font-size: $font-size-smaller;
       padding-bottom: 1rem;
-
+      background: $green-main;
+      color: $white;
+      padding: .8rem  0  .8rem 1.2rem;
+      margin: 2rem 0;
     }
 
     &-readmore {
-      display: block;
+      display: inline-block;
       font-size: $font-size-small;
-
     }
-
   }
 
   &__bcg {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
-
   }
 }

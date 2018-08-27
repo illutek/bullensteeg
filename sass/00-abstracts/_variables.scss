@@ -13,6 +13,7 @@ $gray-spanish: #969A97;
 
 // FONTS
 $font-family: "Montserrat", sans-serif;
+$font-family--heading: "Montserrat", sans-serif;
 $base-font-size: 1.8rem;
 $font-size-small: calc(#{$base-font-size} - .3rem);
 $font-size-smaller: calc(#{$base-font-size} - .6rem);
@@ -21,3 +22,4 @@ $heading-second: 3.2rem;
 
 //
 $panel-shadow: 0 4px 8px 0 rgba($black-gunmetal, 0.1), 0 6px 20px 0 rgba($black-gunmetal, 0.1);
+$panal-shadow-more: 0 4px 8px 0 rgba($black-gunmetal, 0.5), 0 6px 20px 0 rgba($black-gunmetal, 0.1);
