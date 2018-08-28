@@ -8,8 +8,11 @@ description: 'Bullensteeg Franse bulldoggen'
 
 regions:
   content: Content
+  aboutus: 'About us'
+  pupsexpected: 'Pups verwacht'
+  ourpets: 'Our Pets'
+  news: Nieuws
 
 
 libraries:
   - bullensteeg/globalstyle
-  - bullensteeg/fonts

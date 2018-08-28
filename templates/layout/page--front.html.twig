@@ -1,0 +1,47 @@
+    <header class="header">
+
+        <div class="container">
+
+            <div class="header__top">
+
+                <div class="site__name heading">
+                    De Bullensteeg
+                </div>
+
+                <div class="header__menu">
+                    {% include directory ~ '/templates/partials/shared/navigation.html.twig' %}
+                    <!-- end navigation -->
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+        <div class="container">
+
+          <div class="header__main">    
+            {% include directory ~ 'templates/particals/shared/header-front.html.twig' %}   
+          </div>
+
+        </div>
+
+    </header>
+
+    {% include directory ~ 'templates/partials/front-page/aboutus.html.twig' %}
+
+    {% include directory ~ 'templates/partials/front-page/pups-expected.html.twig' %}
+
+    
+
+    <div class="container">
+
+        {% include directory ~ 'templates/partials/front-page/our-pets.html.twig' %}
+
+        {% include directory ~ 'templates/partials/front-page/news.html.twig' %}
+
+    </div>
+
+    {% include directory ~ 'templates/partials/footer.html.twig' %}
