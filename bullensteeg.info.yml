@@ -1,10 +1,13 @@
-core: 8.x
+name: bullensteeg
 type: theme
-version: 1.0.0
-base theme: classy
- 
-name: 'Bullensteeg'
 description: 'Bullensteeg Franse bulldoggen'
+base theme: classy
+package: Custom
+core: 8.x
+version: 1.0.0
+
+libraries:
+  - bullensteeg/globalstyle
 
 regions:
   content: Content
@@ -12,7 +15,3 @@ regions:
   pupsexpected: 'Pups verwacht'
   ourpets: 'Our Pets'
   news: Nieuws
-
-
-libraries:
-  - bullensteeg/globalstyle
