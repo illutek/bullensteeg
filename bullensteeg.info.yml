@@ -8,6 +8,7 @@ version: 1.0.0
 
 libraries:
   - bullensteeg/globalstyle
+  - bullensteeg/fonts
 
 regions:
   content: Content
