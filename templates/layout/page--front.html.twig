@@ -1,32 +1,31 @@
-    <header class="header">
+<header class="header">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="header__top">
+      <div class="header__top">
 
-                <div class="site__name heading">
-                    De Bullensteeg
-                    {# {{ site_name }} #}
-                </div>
-
-                <div class="header__menu">
-                    {% include directory ~ '/templates/partials/shared/navigation.html.twig' %}
-                    <!-- end navigation -->
-                </div>
-
-            </div>
-
+        <div class="site__name heading">
+        {#  the site name and slogan out of configuration via .theme file #}
+          {{ site_name }}
         </div>
 
-        <div class="container">
-
-          <div class="header__main">    
-            {% include directory ~ '/templates/partials/front-page/header-front.html.twig' %}   
-          </div>
-
+        <div class="header__menu">
+          {% include directory ~ '/templates/partials/shared/navigation.html.twig' %}
         </div>
 
-    </header>
+      </div>
+
+    </div>
+
+    <div class="container">
+
+      <div class="header__main">    
+        {% include directory ~ '/templates/partials/front-page/header-front.html.twig' %}   
+      </div>
+
+    </div>
+
+</header>
 
     {% include directory ~ '/templates/partials/front-page/aboutus.html.twig' %}
 

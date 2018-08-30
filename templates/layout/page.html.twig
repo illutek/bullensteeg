@@ -42,10 +42,12 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
 
+{% include directory ~ '/templates/partials/page/header.html.twig' %}
 
-  {{ page.help }}
+<div class='container'>
+
+{{ page.help }}
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -57,5 +59,9 @@
 
   </main>
 
+</div>
 
-</div>{# /.layout-container #}
+{% include directory ~ '/templates/partials/shared/footer.html.twig' %}
+  
+
+
