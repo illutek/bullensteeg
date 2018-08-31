@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'panel-content',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  <div class="panel-content__img">{{ content.field_aboutme_img }}</div>
+  
+  <div class="panel-content__wrapper">
+    <h2 class="heading heading-second">{{ label }}</h2>
+    {{ content.body }}
+
+  </div>
+
+  <div class="panel-content__bcg"></div>
+
+</article>
