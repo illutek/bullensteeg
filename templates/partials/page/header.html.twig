@@ -9,7 +9,8 @@
     <div class="header__top">
       <div class="site__name heading">
       {#  the site name and slogan out of configuration via .theme file #}
-        {{ site_name }}
+      <a href="{{ path('<front>') }}">{{ site_name }}</a>
+        
       </div>
       <div class="header__menu">
         {% include directory ~ '/templates/partials/shared/navigation.html.twig' %}
