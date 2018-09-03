@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'pups-expected',
+    'panel-wide',
+    'pups-expected-content',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  <div class="panel-wide__img">
+    {{ content.field_expected_img }}
+  </div>
+
+  <div class="panel-wide__wrapper">
+
+    <div class="pups-expected__title">
+      <div class="heading">
+        {{ label }}
+      </div>
+    </div>
+
+    <div class="pups-expected__teaser-content">
+      {{ content.body }}
+    </div>
+    
+    <div class="read-more u-flex-align-right">
+      <a href="{{base_path}}onze-pups" class="read-more__link">Lees meer</a>
+    </div>
+
+  </div>
+
+  <div class="panel-wide__bcg"></div>
+
+</article>
