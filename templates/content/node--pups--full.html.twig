@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'our-pups',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  <div class="our-pups__img-wrap">
+    <div class="our-pups__img-wrap--mobile">
+     {{ content.field_ourpups_img[0] }}
+    </div>
+    <div class="our-pups__img-wrap--desktop">
+      {{ content.field_ourpups_img }}
+    </div>
+  </div>
+ 
+  <div class="our-pups__text">
+    <div class="our-pups__text-content-wrap">
+      <div class="our-pups__text-content-title">
+        <h2 class="heading heading-second heading-second--taller">
+          {{ label }}
+        </h2>
+      </div>
+
+      <div class="our-pups__text-content-body">
+        {{ content.body }}
+      </div>
+    </div>
+  </div>
+
+  <div class="our-pups__bcg bcg"></div>
+
+</article>
