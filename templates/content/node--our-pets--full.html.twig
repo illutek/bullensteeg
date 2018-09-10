@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'our-pets__container',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  <div class="node__pet-panel">
+
+    <div class="node__pet-panel__image">
+      {{ content.field_ourpet_img }}
+    </div>
+
+    <div class="node__pet-panel__body">
+      <div class="pet-panel__body-name">
+        {{ label }}
+      </div>
+
+      {{ content.body }}
+
+      <div class="pet-panel__body-born-on">
+        {{ "Geboren op: "}}{{ content.field_ourpets_born }}
+      </div>
+
+      <div class="node__pet-panel-genealogy">
+        {{ content.field_ourpets_stamboom }}
+      </div>
+
+      <div class="showresults">
+        {{ content.field_showresultaten }}
+      </div>
+
+    </div>
+
+  </div>
+
+</article>

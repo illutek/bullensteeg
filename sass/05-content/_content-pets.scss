@@ -25,10 +25,44 @@
 
     grid-area: body;
     align-self: end;
+
+    &-born-on {
+      
+    }
+  }
+
+  &-genealogy {
+    padding-bottom: 2rem;
+
+    a {
+      color: $black_gunmetal;
+      font-weight: 900;
+    }
   }
 
   &__bcg {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
   }
+}
+
+.showresults {
+
+  &__paragraph {
+    padding-bottom: 2rem;
+  }
+  
+  &__title {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  &__sub-title {
+    font-weight: 900;
+  }
+
+  &__body {
+
+  }
+
 }
