@@ -4,7 +4,28 @@
  * Theme override for a field.
  */
 #}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+{%
+  set title_classes = [
+    'field__label',
+    'u-margin-right-less',
+    'u-inline-block',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
 
-{% for item in items %}
-  {{ item.content }}
-{% endfor %}
+<div{{ attributes.addClass(classes) }}>
+  <div{{ title_attributes.addClass(title_classes) }}><i class="fas fa-download"></i></div>
+  <div class="u-inline-block">
+    {% for item in items %}
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+  </div>
+</div>

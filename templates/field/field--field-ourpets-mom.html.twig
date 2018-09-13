@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ */
+#}
+{%
+  set classes = [
+    'parent__mom',
+  ]
+%}
+{% for item in items %}
+  <div{{ attributes.addClass(classes) }}>{{ item.content }}</div>
+{% endfor %}

@@ -25,25 +25,42 @@
     </div>
 
     <div class="node__pet-panel__body">
+
       <div class="pet-panel__body-name">
         {{ label }}
       </div>
 
       {{ content.body }}
 
-      <div class="pet-panel__body-born-on">
+      <div class="pet-panel__body-born-on node__pet-panel__body-born-on">
         {{ "Geboren op: "}}{{ content.field_ourpets_born }}
       </div>
+
+      <div class="parent-wrapper">
+        <div class="parent">
+          <div class="parent__label">{{ 'Naam moeder: '|t }}</div>
+          {{ content.field_ourpets_mom }}          
+        </div>
+
+        <div class="parent">
+          <div class="parent__label">{{ 'Naam vader: '|t }}</div>
+          {{ content.field_ourpets_dad }}          
+        </div>     
+      </div>
+
+       
 
       <div class="node__pet-panel-genealogy">
         {{ content.field_ourpets_stamboom }}
       </div>
 
-      <div class="showresults">
-        {{ content.field_showresultaten }}
-      </div>
-
     </div>
+
+    <div class="showresults">
+      {{ content.field_showresultaten }}
+    </div>
+
+    <div class="node__pet-panel__bcg bcg"></div>
 
   </div>
 
