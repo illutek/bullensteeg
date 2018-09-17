@@ -11,7 +11,9 @@
     "."
     "reuen";
 
-  @include respond(desktop) {
+  justify-items: center;
+
+  @include respond(tablet) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: "teven reuen";
@@ -19,11 +21,9 @@
 
   &__teven {
     grid-area: teven;
-
   }
 
   &__reuen {
     grid-area: reuen;
-
   }
 }
