@@ -1,0 +1,58 @@
+// /////////////////////////
+// @@ CONTENT BLOG
+// ////////////////////////
+
+.blog-wrapper {
+  padding: 5rem 0;
+  border-bottom: 1px solid $gray-spanish;    
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  grid-template-areas: 
+    "title"
+    "body";
+
+  @include respond(tablet) {
+    grid-template-columns: 2fr 4fr;
+    grid-template-areas: 
+      "title body";
+  }
+
+  &__title {
+    grid-area: title;
+
+    font-weight: $tw-semi-bold;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    @include respond(tablet) {
+      align-self: center;
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+  
+  &__body {
+    grid-area: body;
+  }
+
+  &__text {}
+
+  //title on page--nieuws.html.twig
+  &__page-title {
+      padding: 2rem 0;
+      margin: 1rem 0 2rem;
+      background: $green-main;
+      color: $white;
+  }
+  //on views-view--nieuws-pagina.html.twig
+  &__counter {
+    background: $white;
+    color: $gray-spanish;
+    text-align: right;
+    padding: 1rem 2rem;
+  }
+}

@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'blog-wrapper',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  <div class="blog">
+  
+    <div class="blog__title">
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </div>
+    <div class="blog__body">
+      <div class="blog__text">
+        {{ content.body }}
+      </div>
+      <div class="read-more">
+        <a class="read-more__link" href="{{ url }}" rel="bookmark">{{ "Lees verder"|t }}</a>
+      </div>    
+    </div>
+  
+  </div>
+
+</article>

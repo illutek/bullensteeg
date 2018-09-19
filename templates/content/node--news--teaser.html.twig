@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'news',
+    'panel-wide',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{% set bodytext = content.body|render|striptags %}
+
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+<div class="panel-wide__img">
+  {{ content.field_news_img.0 }}
+</div>
+
+  <div class="panel-wide__wrapper">
+
+    <h2 class="heading heading-second u-margin-top">
+      {{ label }}
+    </h2>
+
+    <div class="panel-wide__content">
+      {{ bodytext|length > 130 ? bodytext|slice(0, 130) ~ '...' : bodytext }}
+    </div>
+
+    <div class="read-more u-flex-align-right">
+      {% if bodytext|length > 130 %}
+        <a href="{{ url }}" class="read-more__link">Lees meer</a>
+      {% endif %}
+    </div>
+
+  </div>
+
+    <div class="panel-wide__bcg"></div> 
+
+</article>
+
+
+{# 
+<div class="panel-wide__img">
+  <img src="{{ base_path ~ directory }}/images/for_html/mystic.jpg" alt="news">
+</div>
+
+<div class="panel-wide__wrapper">
+  <h2 class="heading heading-second u-margin-top">
+    In memoriam
+  </h2>
+  <div class="panel-wide__content">
+    <p>
+      Jij mooie meid met je ogen die altijd heel attent me overal volgde.
+    </p>
+    <p>
+      Je hebt me doen verschieten om plots van ons heen te gaan.
+    </p>
+  </div>
+  <div class="read-more u-flex-align-right">
+    <a href="#" class="read-more__link">Lees meer</a>
+  </div>
+  </div>
+
+  <div class="panel-wide__bcg"></div> 
+  
+#}
+
