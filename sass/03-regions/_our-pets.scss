@@ -12,6 +12,7 @@
     "reuen";
 
   justify-items: center;
+  margin-bottom: 5rem;
 
   @include respond(tablet) {
     grid-template-columns: repeat(2, 1fr);

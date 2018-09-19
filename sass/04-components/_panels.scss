@@ -3,11 +3,18 @@
 // ////////////////////////
 
 .panel {
-  margin: 0 auto;
-  max-width: 35rem;
+  width: 80vw;
   background: $white;
   box-shadow: $panel-shadow;
   z-index: 1;
+
+  @include respond(tablet) {
+    width: 40vw;
+  }
+
+  @include respond(desktop) {
+    width: 25vw;
+  }
 
   &__inner {
     padding: 2rem;
