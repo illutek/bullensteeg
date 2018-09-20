@@ -7,7 +7,7 @@
 {%
   set classes = [
     'node',
-    'our-pups',
+    'pnl-right',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
@@ -18,29 +18,29 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-  <div class="our-pups__img-wrap">
-    <div class="our-pups__img-wrap--mobile">
+  <div class="pnl-right__img-wrap">
+    <div class="pnl-right__img-wrap--mobile">
      {{ content.field_ourpups_img[0] }}
     </div>
-    <div class="our-pups__img-wrap--desktop">
+    <div class="pnl-right__img-wrap--desktop">
       {{ content.field_ourpups_img }}
     </div>
   </div>
  
-  <div class="our-pups__text">
-    <div class="our-pups__text-content-wrap">
-      <div class="our-pups__text-content-title">
+  <div class="pnl-right__text">
+    <div class="pnl-right__text-content-wrap">
+      <div class="pnl-right__text-content-title">
         <h2 class="heading heading-second heading-second--taller">
           {{ label }}
         </h2>
       </div>
 
-      <div class="our-pups__text-content-body">
+      <div class="pnl-right__text-content-body">
         {{ content.body }}
       </div>
     </div>
   </div>
 
-  <div class="our-pups__bcg bcg"></div>
+  <div class="pnl-right__bcg bcg"></div>
 
 </article>

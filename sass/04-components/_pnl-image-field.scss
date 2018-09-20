@@ -1,0 +1,11 @@
+// ////////////////////////////
+// @@ IMAGE FIELD ON PNL-...
+// ////////////////////////////
+
+.pnl__img-field {
+    max-width: 15vw;
+
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+}

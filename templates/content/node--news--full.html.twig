@@ -8,6 +8,7 @@
 {%
   set classes = [
     'node',
+    'pnl-right',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
@@ -18,16 +19,29 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content.body }}
+ <div class="pnl-right__img-wrap">
+    <div class="pnl-right__img-wrap--mobile">
+     {{ content.field_news_img.0 }}
+    </div>
+    <div class="pnl-right__img-wrap--desktop">
+      {{ content.field_news_img }}
+    </div>
   </div>
+
+  <div class="pnl-right__text">
+    <div class="pnl-right__text-content-wrap">
+      <div class="pnl-right__text-content-title">
+        <h2 class="heading heading-second heading-second--taller">
+          {{ label }}
+        </h2>
+      </div>
+
+      <div class="pnl-right__text-content-body">
+        {{ content.body }}
+      </div>
+    </div>
+  </div>
+
+  <div class="pnl-right__bcg bcg"></div>
 
 </article>
