@@ -4,8 +4,24 @@
 
 .pnl__img-field {
     max-width: 15vw;
+    transition: all .3s;
 
     &:not(:last-child) {
         margin-right: 1rem;
+    }
+
+    &--scale {
+
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+
+    &--border {
+      outline-offset: .2rem;
+        &:hover {
+          outline: 1px solid $green-main;
+        }
+        
     }
 }

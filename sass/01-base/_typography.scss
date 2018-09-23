@@ -19,9 +19,6 @@ body {
   font-size: 4.2rem;
   line-height: 5rem;
 
-  
-  
-
   @include respond(desktop) {
     line-height: 7rem;
     @include responsive-font(3.5vw, 6rem, 7rem);
@@ -41,6 +38,12 @@ body {
     @include respond(desktop) {
       line-height: 4rem;
       @include responsive-font(2.8vw, 4rem, 5rem);
+    }
+  }
+
+  &--mb-none {
+    @include respond(desktop) {
+      margin-bottom: 0;
     }
   }
 }

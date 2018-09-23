@@ -44,12 +44,10 @@
         display: none;
   
         @include respond(desktop) {
-        //   display: grid;
-        //   grid-template-columns: repeat(3, 1fr);
-        //   grid-gap: .8rem;
+          display: flex;
+          overflow: hidden;
 
-        display: flex;
-        overflow: hidden;
+          padding: .5rem;
         }
       }
   
