@@ -73,6 +73,10 @@
       &-content-title {
         align-self: center;
       }
+
+      &-content-body {
+        align-self: center;
+      }
   
       @include respond(desktop) {
         grid-column: 2 / -1;

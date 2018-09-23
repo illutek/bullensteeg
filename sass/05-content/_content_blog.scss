@@ -19,6 +19,7 @@
     grid-template-columns: 2fr 4fr;
     grid-template-areas: 
       "title body";
+    grid-gap: 4rem;
   }
 
   &__title {
