@@ -18,11 +18,11 @@
 %}
 {{ attach_library('classy/node') }}
 <article {{ attributes.addClass(classes) }}>
-  <div class="aboutus__img">
+  <div class="aboutus__img wow slideInLeft" data-wow-duration="1s"">
     {{ content.field_aboutme_img }}
   </div>
 
-  <div class="aboutus__text">
+  <div class="aboutus__text wow slideInUp" data-wow-duration="1s"">
     <h2 class="heading heading-second heading-second--taller">
       {{ label }}
     </h2>

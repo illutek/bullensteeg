@@ -18,11 +18,11 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-  <div class="pet-panel__image">
+  <div class="pet-panel__image wow slideInUp" data-wow-duration="1s">
     {{ content.field_ourpet_img }}
   </div>
 
-  <div class="pet-panel__body">
+  <div class="pet-panel__body  wow slideInUp" data-wow-duration="1.5s">
     <div class="pet-panel__body-name">
       {{ label }}
     </div>

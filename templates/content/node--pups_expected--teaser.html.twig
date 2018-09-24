@@ -23,11 +23,11 @@
 
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
-  <div class="panel-wide__img">
+  <div class="panel-wide__img wow slideInUp" data-wow-duration="1s">
     {{ content.field_expected_img }}
   </div>
 
-  <div class="panel-wide__wrapper">
+  <div class="panel-wide__wrapper wow slideInUp" data-wow-duration="1s">
 
     <div class="pups-expected__title">
       <div class="heading">
@@ -40,11 +40,13 @@
     </div>
     
     <div class="read-more u-flex-align-right">
-      <a href="{{base_path}}onze-pups" class="read-more__link">Lees meer</a>
+      <a href="{{base_path}}onze-pups" class="read-more__link">
+        {{ "Lees meer"|t }}
+      </a>
     </div>
 
   </div>
 
-  <div class="panel-wide__bcg"></div>
+  <div class="panel-wide__bcg wow slideInUp" data-wow-duration="0.8s"></div>
 
 </article>
