@@ -23,11 +23,11 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-<div class="panel-wide__img wow slideInLeft" data-wow-duration="1s">
-  {{ content.field_news_img.0 }}
-</div>
+  <div class="panel-wide__img wow slideInLeft" data-wow-duration="1.2s">
+    {{ content.field_news_img.0 }}
+  </div>
 
-  <div class="panel-wide__wrapper wow slideInUp" data-wow-duration="1.5s">
+  <div class="panel-wide__wrapper wow slideInUp" data-wow-duration="1s">
 
     <h2 class="heading heading-second u-margin-top">
       {{ label }}
@@ -45,6 +45,6 @@
 
   </div>
 
-    <div class="panel-wide__bcg"></div> 
+  <div class="panel-wide__bcg wow slideInUp" data-wow-duration="1s"></div> 
 
 </article>
