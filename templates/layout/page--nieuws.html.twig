@@ -17,11 +17,9 @@
 
 <div class='container'>
 
-  
+  {{ page.pupsexpected }}
 
-{{ page.pupsexpected }}
-
-{{ page.help }}
+  {{ page.help }}
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -29,13 +27,8 @@
     <div class="layout-content">
       {{ page.content }}
     </div>{# /.layout-content #}
-
-
   </main>
 
 </div>
 
 {% include directory ~ '/templates/partials/shared/footer.html.twig' %}
-  
-
-
