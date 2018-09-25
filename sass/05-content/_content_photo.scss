@@ -3,7 +3,46 @@
 // /////////////////////////////
 
 .node-photo {
-    margin: 3rem 0;
+    margin: 5rem 0;
+
+    &__header {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      margin-bottom: 6rem;
+
+      @include respond(tablet) {
+        grid-template-columns: 6fr 8fr;
+        grid-gap: 4rem;
+      }
+    }
+
+    &__heading {
+      align-self: center;
+      color: $green-main;
+    }
+
+    &__info {
+      position: relative;
+
+      @include respond(tablet) {
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          rotate: 90dreg;
+          border: 1px solid $green-main;
+          width: 12vw;
+        }
+
+        &-field {
+          padding-bottom: 3rem;
+        }
+      }
+     
+
+    }
 }
 
 .photo-grid {

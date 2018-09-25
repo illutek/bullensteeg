@@ -19,8 +19,21 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
+  <div class="node-photo__header">
+
+    <h2 class="node-photo__heading heading heading-second heading-second--taller heading-second--mb-none">
+      {{ label }}
+    </h2>
+
+    <div class="node-photo__info">
+      {{ content.field_photos_info }}
+    </div>
+
+  </div>
+  
+
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    {{ content.field_photo_img }}
   </div>
 
 </article>
