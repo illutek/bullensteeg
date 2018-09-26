@@ -35,10 +35,17 @@ body {
   margin-bottom: 4rem;
 
   &--taller {
+
     @include respond(desktop) {
       line-height: 4rem;
-      @include responsive-font(2.8vw, 4rem, 5rem);
+      @include responsive-font(2.8vw, 5rem, 5rem);
     }
+
+    @include respond(big-desktop) {
+      line-height: 7rem;
+      @include responsive-font(3.2vw, 6rem, 7rem);
+    }
+
   }
 
   &--mb-none {

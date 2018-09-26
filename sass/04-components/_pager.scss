@@ -1,0 +1,24 @@
+// /////////////////////////
+// @@ PAGER
+// ////////////////////////
+
+.pager {
+  padding: 2rem 0;
+
+  &__item {
+
+    &--underline {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        left: 5px;
+        bottom: 5px;
+        height: 2px;
+        background-color: $green-lighter;
+        width: 82%;
+      }
+    }
+  }
+}
