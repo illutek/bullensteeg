@@ -1,0 +1,66 @@
+// /////////////////////////
+// @@ PANEL CENTER
+// ////////////////////////
+
+.pnl-center {
+    margin: 8rem auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  
+    @include respond(desktop) {
+      grid-template-columns: 1fr 5fr 15fr;
+      grid-template-rows: 8rem 30rem auto;
+    }
+  
+    &__img {
+      overflow: hidden;
+      margin-bottom: 3rem;
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      order: 1;
+  
+      @include respond(desktop) {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+      }
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    &__wrapper {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+      order: 2;
+  
+      padding: 0 3rem 6rem;
+  
+      @include respond(desktop) {
+        grid-column: 3 / -1;
+        grid-row: 2 / -1;
+  
+        padding: 7rem;
+        align-self: center;
+      }
+  
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &__bcg {
+      grid-column: 1 / -1;
+      grid-row: 1 / 3;
+  
+      @include respond(desktop) {
+        grid-column: 2 / -1;
+        grid-row: 2 / -1;
+      }
+  
+      box-shadow: $panel-shadow;
+      background: $white;
+    }
+}

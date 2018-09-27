@@ -8,7 +8,7 @@
 {%
   set classes = [
     'node',
-    'panel-content',
+    'pnl-center',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
@@ -18,14 +18,14 @@
 %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
-  <div class="panel-content__img">{{ content.field_aboutme_img }}</div>
+  <div class="pnl-center__img">{{ content.field_aboutme_img }}</div>
   
-  <div class="panel-content__wrapper">
+  <div class="pnl-center__wrapper">
     <h2 class="heading heading-second">{{ label }}</h2>
     {{ content.body }}
 
   </div>
 
-  <div class="panel-content__bcg"></div>
+  <div class="pnl-center__bcg"></div>
 
 </article>
