@@ -11,8 +11,10 @@ libraries:
   - bullensteeg/fonts
 
 regions:
+  contactinfoheader: 'Contact info header'
   content: Content
   aboutus: 'About us'
   pupsexpected: 'Pups verwacht'
   ourpets: 'Our Pets'
   news: Nieuws
+  contactinfo: 'Contact information'

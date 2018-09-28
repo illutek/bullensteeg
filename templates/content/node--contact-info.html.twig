@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'sub-footer__contact-details',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  <div class="sub-footer__name">
+    {{ content.field_aboutme_name }}
+  </div>
+
+  <div class="sub-footer__phone")>
+    <a class="phone btn--green" href="tel:{{ content.field_aboutme_phone }}"> {{ content.field_aboutme_label_phone}}</a>
+    <div class="phone--desktop" {{ content.field_aboutme_label_phone}}
+  </div>
+
+</article>

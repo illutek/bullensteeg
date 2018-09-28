@@ -14,21 +14,21 @@
     </h1>
 </div>
 
-<div class="header__cta">
-    <a href="tel:011123456" class="btn btn--green">Contacteer mij.</a>
-</div>
-
- <div class="header__cta--desktop">
-    <a href="#" class="btn btn--green btn--more-padding">Contacteer mij via mail.</a>
-</div>
+  <div class="header__cta">
+    <script>
+      {% include directory ~ '/js/email_spam-header.js' %}   
+    </script>
+                       
+    <noscript>{{ "Sorry, je hebt Javascript om mij te contacteren."|t }}</noscript>
+  </div>
 
 <div class="header__slogan-sub">
 {#  the site name and slogan out of configuration via .theme file #}
     <p>“{{ site_slogan }}”</p>
 </div>
 
-<div class="contact-details contact-details--green contact-details--full-width">
-    Marleen Halleng
-    <br> marleenhalleng@gmail.com
-    <br> Tel: (+32) 497 239 743
+<div class="contact-details contact-details--full-width">
+
+  {{ page.contactinfoheader }}
+
 </div>

@@ -1,0 +1,21 @@
+// /////////////////////////
+// @@ PHONE
+// ////////////////////////
+
+.phone {
+    display: block;
+    padding: 2rem 3rem;
+    text-align: center;  
+  
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+  
+  .phone--desktop {
+    display: none;
+  
+    @include respond(tablet) {
+      display: block;
+    }
+  }

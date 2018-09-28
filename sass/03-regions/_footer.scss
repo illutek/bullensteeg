@@ -42,6 +42,16 @@
 
     line-height: 3rem;
   }
+
+  &__name {
+    margin-bottom: 2rem;
+
+    @include respond(tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__phone {}
 }
 
 .footer {
