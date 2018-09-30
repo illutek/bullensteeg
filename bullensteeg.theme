@@ -22,3 +22,22 @@ function bullensteeg_theme_suggestions_page_alter(array &$suggestions, array $va
     $suggestions[] = 'page__'.$content_type;
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+*/
+function bullensteeg_preprocess_file_link(&$variables) {
+  // Add target _blank attribute to all file links.
+  $file = $variables['file'];
+  $url = file_create_url($file->uri->value);
+  // Use the description as the link text if available.
+  if (empty($variables['description'])) {
+    $link_text = $file->filename->value;
+  }
+  else {
+    $link_text = $variables['description']->__toString();
+  }
+  $link = '<a href="'.$url.'" type="'.$file->filemime->value . '" length="' . $file->filesize->value . '" title="' . \Drupal\Component\Utility\Html::escape($file->filename->value) . '" target="_blank">' . \Drupal\Component\Utility\Html::escape($link_text) . '</a>';
+  $variables['link']->setGeneratedLink($link);
+}
+
