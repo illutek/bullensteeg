@@ -16,6 +16,9 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
+
+{% set bodytext = content.body|render|striptags %}
+
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
@@ -26,7 +29,7 @@
     </div>
     <div class="blog__body">
       <div class="blog__text">
-        {{ content.body }}
+        {{ bodytext|length > 190 ? bodytext|slice(0, 190) ~ ' ...' : bodytext }}
       </div>
       <div class="read-more">
         <a class="read-more__link" href="{{ url }}" rel="bookmark">{{ "Lees verder"|t }}</a>
