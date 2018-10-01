@@ -15,6 +15,17 @@ animatestyle:
   css:
     theme:
       bower_components/animate.css/animate.css: {}
+
+email:
+  header: true
+  js:
+    js/email.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
       
 frontjs:
   js:

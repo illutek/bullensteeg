@@ -11,18 +11,19 @@
     <div class="sub-footer">
 
       <div class="sub-footer__btn-contact">
-        {# <script>
-          {% include directory ~ '/js/email_spam.js' %}   
-        </script> #}
-                       
-        <noscript>{{ "Sorry, je hebt Javascript om mij te contacteren."|t }}</noscript>
+        <div class="sub-footer__email">
+          <script>mail("marleenhalleng","gmail",0,"","")</script>
+        </div>
       </div>
 
-      {# Block region contact information - content type 'aboutme'  #}
+      {# 
+      /**
+      * Block region contact information - content type 'aboutme'  
+      * node--contact-info.html.twig
+      #}
 
       {{ page.contactinfo }}
       
-
     </div>
     <!-- end sub-footer -->
 

@@ -15,11 +15,13 @@
 </div>
 
   <div class="header__cta">
-    {# <script>
-      {% include directory ~ '/js/email_spam-header.js' %}   
-    </script> #}
-                       
-    <noscript>{{ "Sorry, je hebt Javascript om mij te contacteren."|t }}</noscript>
+  {# 
+  /**
+  * the class="btn btn--green u-align-center u-full-width"
+  * added to the file email.js
+  */
+  #}
+    <script>mail2("marleenhalleng","gmail",0,"","Contacteer me via e-mail")</script>
   </div>
 
 <div class="header__slogan-sub">
