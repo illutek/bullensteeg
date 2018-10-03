@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Theme override to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+<header class="header header--maintenance">
+
+  <div class="container">
+
+    <div class="header__top">
+
+      <div class="site__name heading">
+        {#  the site name and slogan out of configuration via .theme file #}
+          {{ site_name }}
+      </div>
+
+    </div>
+
+    <div class="container">
+
+      <div class="header__main">  
+        <div class="header__img">
+          <img src="{{ base_path ~ directory }}/images/front-img.jpg" alt="Bullensteeg groepsfoto">
+        </div>
+
+        <div class="header__slogan">
+          <h1 class="heading-first">
+            Franse bulldoggen,<br> grote liefde,<br> passie en hobby.
+          </h1>
+        </div>
+
+        <div class="header__cta maintenance-content">
+          {{ page.content }}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  
+
+</div>
