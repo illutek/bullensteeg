@@ -1,0 +1,52 @@
+{# 
+/**
+ * include for navigation.html.twig
+ * navigation mobile
+ * 
+*/
+ #}
+
+<nav class="navigation__nav">
+
+  <div class="navigation__items">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <a href="{{ path('<front>') }}" class="navigation__link">{{ "Home"|t }}</a>
+      </li>
+      <li class="navigation__item">
+        <a href="{{ base_path }}onze-teven" class="navigation__link">{{ "Teven"|t }}</a>
+      </li>
+      <li class="navigation__item">
+        <a href="{{ base_path }}onze-reuen" class="navigation__link">{{ "Reuen"|t }}</a>
+      </li>
+      <li class="navigation__item">
+        <a href="{{ base_path }}onze-pups" class="navigation__link">{{ "Pups"|t }}</a>
+      </li>
+      <li class="navigation__item">
+        <a href="{{ base_path }}foto-album" class="navigation__link">{{ "Foto's"|t }}</a>
+      </li>
+      <li class="navigation__item">
+        <a href="{{ base_path }}nieuws" class="navigation__link">{{ "Nieuws"|t }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="navigation__branding">
+    <div class="navigation__site-avatar">
+      {# 
+        /**
+        * Block region Profiel foto - content type 'aboutme'  
+        * node--profiel-img.html.twig
+      #}
+      {{ page.profil }}
+    </div>
+    <div class="navigation__site-name">
+      {{ site_name }}
+    </div>
+    </div>
+
+    <div class="navigation__footer">
+      <a href="#" class="navigation__footer-link">Privacy</a>
+    </div>
+
+</nav>

@@ -4,33 +4,41 @@
 */
 #}
 
-<div class="header__img">
-    <img src="{{ base_path ~ directory }}/images/front-img.jpg" alt="Bullensteeg groepsfoto">
-</div>
+<div class="container">
 
-<div class="header__slogan">
-    <h1 class="heading-first">
-        Franse bulldoggen,<br> grote liefde,<br> passie en hobby.
-    </h1>
-</div>
+  <div class="header__main">  
 
-  <div class="header__cta">
-  {# 
-  /**
-  * the class="btn btn--green u-align-center u-full-width"
-  * added to the file email.js
-  */
-  #}
-    <script>mail2("marleenhalleng","gmail",0,"","Contacteer me via e-mail")</script>
+    <div class="header__img">
+        <img src="{{ base_path ~ directory }}/images/front-img.jpg" alt="Bullensteeg groepsfoto">
+    </div>
+
+    <div class="header__title">
+        <h1 class="heading-first">
+            Franse bulldoggen,<br> grote liefde,<br> passie en hobby.
+        </h1>
+    </div>
+
+    <div class="header__cta">
+    {# 
+    /**
+    * the class="btn btn--green u-align-center u-full-width"
+    * added to the file email.js
+    */
+    #}
+      <script>mail2("marleenhalleng","gmail",0,"","Contacteer me via e-mail")</script>
+    </div>
+
+    <div class="header__slogan-sub">
+    {#  the site name and slogan out of configuration via .theme file #}
+        <p>“{{ site_slogan }}”</p>
+    </div>
+
+    <div class="contact-details contact-details--full-width">
+
+      {{ page.contactinfoheader }}
+
+    </div>
+
   </div>
-
-<div class="header__slogan-sub">
-{#  the site name and slogan out of configuration via .theme file #}
-    <p>“{{ site_slogan }}”</p>
-</div>
-
-<div class="contact-details contact-details--full-width">
-
-  {{ page.contactinfoheader }}
-
+  
 </div>

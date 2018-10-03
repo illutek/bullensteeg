@@ -44,7 +44,7 @@
 
   &__img {
     grid-area: header-img;
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
     display: none;
 
     @include respond(tablet) {
@@ -54,13 +54,15 @@
     }
   }
 
-  &__slogan {
+  &__title {
     grid-area: slogan;
-    margin: 4rem 0 6rem;
+    margin: 4rem 0 3rem;
 
     @include respond(tablet) {
       grid-column: 1 / -1;
       grid-row: 1 / 2;
+
+      margin: 4rem 0 6rem;
     }
 
   }
@@ -79,10 +81,9 @@
   &__slogan-sub {
     grid-area: slogan-sub;
     margin: 4rem 0;   
-    font-size: calc(#{$base-font-size} - .4rem);
 
     @include respond(tablet) {
-      margin: 1rem 0;
+      // margin: 1rem 0;
       grid-column: 1 / 4;
       grid-row: 4 / 5;
     }
