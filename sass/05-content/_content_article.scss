@@ -1,0 +1,15 @@
+// /////////////////////////
+// @@ CONTENT ARTICLE 
+// ////////////////////////
+
+.article {
+
+  img {
+
+    @include respond(tablet) {
+      width: auto;
+    }
+    
+  }
+
+}
