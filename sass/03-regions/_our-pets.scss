@@ -6,13 +6,11 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 3rem auto;
+  justify-items: center;
   grid-template-areas: 
     "teven"
     "."
     "reuen";
-
-  justify-items: center;
-  margin-bottom: 5rem;
 
   @include respond(tablet) {
     grid-template-columns: repeat(2, 1fr);

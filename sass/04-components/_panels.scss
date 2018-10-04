@@ -3,7 +3,7 @@
 // ////////////////////////
 
 .panel {
-  width: 80vw;
+  width: 60vw;
   background: $white;
   box-shadow: $panel-shadow;
   z-index: 1;
@@ -13,7 +13,7 @@
   }
 
   @include respond(desktop) {
-    width: 25vw;
+    width: 20vw;
   }
 
   &__inner {
