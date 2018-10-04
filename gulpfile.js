@@ -43,7 +43,8 @@ const path = {
         js: 'dist/js/',
         css: 'dist/css/',
         img: 'dist/images/',
-        fonts: 'dist/fonts/'
+        fonts: 'dist/fonts/',
+        png: 'dist'
     },
     src: {
         bower: 'bower_components/**/*.*',
@@ -53,7 +54,8 @@ const path = {
         js: 'js/**/*.js',
         style: 'sass/styles.scss',
         img: 'images/**/*.*',
-        fonts: 'fonts/**/*.*'
+        fonts: 'fonts/**/*.*',
+        png: '*.png'
     },
     watch: {
         twig: 'templates/**/*.twig',
@@ -137,6 +139,11 @@ gulp.task('fonts:dist', function() {
         .pipe(gulp.dest(path.dist.fonts));
 });
 
+gulp.task('png:dist', function () {
+    gulp.src(path.src.png)
+        .pipe(gulp.dest(path.dist.png));
+});
+
 gulp.task('dist', [
     'bower:dist',
     'twig:dist',
@@ -145,7 +152,8 @@ gulp.task('dist', [
     'js:dist',
     'style:dist',
     'fonts:dist',
-    'img:dist'
+    'img:dist',
+    'png:dist'
 ]);
 
 /**
