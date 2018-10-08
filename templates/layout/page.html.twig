@@ -43,22 +43,23 @@
  */
 #}
 
-{% include directory ~ '/templates/partials/page/header.html.twig' %}
 
-<div class='container'>
+  {% include directory ~ '/templates/partials/page/header.html.twig' %}
 
-  {{ page.pupsexpected }}
+  <div class='container'>
 
-  {{ page.help }}
+    {{ page.pupsexpected }}
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {{ page.help }}
 
-    <div class="page-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
-  </main>
+    <main role="main">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-</div>
+      <div class="page-content">
+        {{ page.content }}
+      </div>{# /.layout-content #}
+    </main>
 
-{% include directory ~ '/templates/partials/shared/footer.html.twig' %}
+  </div>
+
+  {% include directory ~ '/templates/partials/shared/footer.html.twig' %}
