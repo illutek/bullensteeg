@@ -20,9 +20,6 @@
 
 .u-negative-big-margin-top {
   margin-top: -12rem;
-  @include respond(tablet) {
-    // margin-top: -10rem;
-  }  
 }
 
 .u-margin-bottom {
