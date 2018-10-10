@@ -14,7 +14,6 @@
     right: 0;
     z-index: 190;
     text-align: center;
-    cursor: pointer;
     transition: all 1.5s;
 
     @include respond(desktop) {
@@ -24,6 +23,7 @@
 
   &__checkbox:checked + &__button {
     background-color: transparent;
+    cursor: pointer;
   }
 
   &__checkbox:checked + &__button &__icon {

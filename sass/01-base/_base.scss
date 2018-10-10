@@ -21,6 +21,10 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   background: $white_anti-flash;
+
+  // Set "link__counter" to 0
+  // used on _nav-mobile.scss
+  counter-reset: link__counter;
 }
 
 p:not(:last-of-type) {
