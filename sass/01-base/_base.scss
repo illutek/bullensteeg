@@ -46,3 +46,8 @@ img {
   width: 100%;
   height: auto;
 }
+
+::selection {
+  background-color: $green-main;
+  color: $white_anti-flash;
+}
