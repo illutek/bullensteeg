@@ -12,7 +12,8 @@
     right: -5rem;
     background: $black_gunmetal;
     z-index: 170;
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.8s;
+    // cubic-bezier(0.86, 0, 0.07, 1)
   }
 
   &__nav {
@@ -23,7 +24,8 @@
     z-index: 175;
     opacity: 0;
     width: 0;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.8s;
+    // cubic-bezier(0.68, -0.55, 0.265, 1.55)
 
     display: grid;
     grid-template-columns: 1fr;
@@ -33,7 +35,7 @@
       "nav-branding"
       "nav-footer";
 
-    @include respond(phone) {
+    @include respond(tablet) {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto 5rem;
       grid-template-areas: 
@@ -75,11 +77,18 @@
   }
 
   &__item {
-    font-size: 3rem;
     
     &:not(:last-of-type) {
-      margin-bottom: 3rem;
-    }
+      margin-bottom: 2rem;    
+    } 
+
+    @include respond(tablet) {
+      font-size: 2.5rem;
+
+      &:not(:last-of-type) {
+        margin-bottom: 3rem;
+        }
+    }   
 
   }
 
@@ -87,7 +96,8 @@
     color: $white_anti-flash;
     transition: color 0.3s;
 
-    &:hover {
+    &:hover,
+    &:active {
       color: $green-main;
     }
 
@@ -95,10 +105,48 @@
       counter-increment: link__counter;
       content: counters(link__counter, "", decimal-leading-zero);
       position: absolute;
-      font-size: $font-size-smaller;
-      top: 0;
-      left: -2rem;
+      font-size: .8rem;
+      top: -.5rem;
+      left: -1.8rem;
       color: $white_anti-flash--darker;
+    }
+  }
+
+  &__branding {
+    margin: 0 auto;    
+    grid-area: nav-branding;
+
+    display: grid;
+    grid-template-columns: minmax(20vw, 25vw) 1fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas: 
+      "site-avatar site-name"
+      "site-slogan site-slogan";
+    grid-column-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+
+    @include respond(tablet) {
+      grid-template-columns: 50vw;
+      grid-template-rows: repeat(3, auto);
+      grid-column-gap: 0;
+      grid-row-gap: 2rem;
+      grid-template-areas: 
+        "site-avatar"
+        "site-name"
+        "site-slogan";
+    }
+  }
+
+  &__site-avatar {
+    grid-area: site-avatar;
+
+    img {
+      border-radius: 50%;
+    }
+
+    @include respond(tablet) {
+      align-self: end;      
     }
   }
 
@@ -106,45 +154,14 @@
     text-transform: uppercase;
     grid-area: site-name;
 
-    @include respond(phone) {
+    @include respond(tablet) {
       align-self: start;
     }
   }
 
-  &__site-avatar {
-    grid-area: site-avatar;
-    img {
-      border-radius: 50%;
-    }
-
-    @include respond(phone) {
-      width: 45%;
-      align-self: end;
-    }
-  }
-
-  &__branding {
-    // width: 90vw;
-    margin: 0 auto;
-    
-    grid-area: nav-branding;
-
-    display: grid;
-    grid-template-columns: minmax(20vw, 25vw) 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-      "site-avatar site-name";
-    grid-gap: 2rem;
-    align-items: center;
-    justify-items: center;
-
-    @include respond(phone) {
-      grid-template-columns: 50vw;
-      grid-template-rows: repeat(2, auto);
-      grid-template-areas: 
-        "site-avatar"
-        "site-name";
-    }
+  &__site-slogan {
+    grid-area: site-slogan;
+    font-size: 1rem;
   }
 
   &__footer {
@@ -156,7 +173,7 @@
     grid-area: nav-footer;
     align-self: center;
 
-    @include respond(phone) {
+    @include respond(tablet) {
       width: 100vw;
       margin: 0;
     }
@@ -170,7 +187,7 @@
       top: 50%;
       z-index: 1;
 
-      @include respond(phone) {
+      @include respond(tablet) {
         width: 90%;
         left: 5%;
       }

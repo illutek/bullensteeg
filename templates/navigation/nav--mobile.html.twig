@@ -37,6 +37,7 @@
   
 
   <div class="navigation__branding">
+
     <div class="navigation__site-avatar">
       {# 
         /**
@@ -45,13 +46,20 @@
       #}
       {{ page.profil }}
     </div>
+
     <div class="navigation__site-name">
-      {{ site_name }}
-    </div>
+      <a href="{{ path('<front>') }}">
+        {{ site_name }}
+      </a>
     </div>
 
-    <div class="navigation__footer">
-      <a href="{{ base_path }}privacyverklaring" class="navigation__footer-link">Privacy</a>
+    <div class="navigation__site-slogan">
+      {{ site_slogan }}    
     </div>
+  </div>
+
+  <div class="navigation__footer">
+    <a href="{{ base_path }}privacyverklaring" class="navigation__footer-link">Privacy</a>
+  </div>
 
 </nav>

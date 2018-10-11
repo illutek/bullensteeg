@@ -32,26 +32,31 @@
 
   &__checkbox:checked + &__button &__icon::before {
     transform: rotate(135deg);
+    width: 3rem;
     top: 0;
   }
 
   &__checkbox:checked + &__button &__icon::after {
     transform: rotate(-135deg);
+    width: 3rem;
     top: 0;
   }
 
   &__icon {
     position: relative;
     transform: translateY(2.5rem);
+    width: 3rem;
+
     &,
     &::before,
     &::after {
-      width: 3rem;
       height: 2px;
       background-color: $white;
       display: inline-block;
       transition: all 0.3s;
     }
+
+
     &::before,
     &::after {
       content: "";
@@ -60,9 +65,11 @@
     }
     &::before {
       top: -0.8rem;
+      width: 1.5rem;
     }
     &::after {
       top: 0.8rem;
+      width: 1rem;
     }
   }
 }
