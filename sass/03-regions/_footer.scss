@@ -13,12 +13,13 @@
   padding: 3rem 0;
   display: grid;
   grid-template-columns: 1fr;
+  grid-row-gap: 3rem;
   grid-template-areas: 
     "btncontact"
     "contactdetails";
 
-  @include respond(tablet) {
-    grid-template-columns: 1fr 1fr;
+  @include respond(desktop) {
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
       "btncontact contactdetails";
     grid-gap: 5rem;
@@ -41,19 +42,55 @@
     grid-area: contactdetails;
 
     line-height: 3rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+      "name"
+      "phone"
+      "social";
+
+    @include respond(tablet) {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: 
+      "name social"
+      "phone .";
+    }
   }
 
   &__name {
     margin-bottom: 2rem;
+    grid-area: name;
 
     @include respond(tablet) {
       margin-bottom: 0;
     }
   }
 
-  &__phone {}
+  &__phone {
+    grid-area: phone;
+  }
+
+  &__social {
+    grid-area: social;
+    justify-self: end;
+
+    padding: 2rem 0;
+    font-size: 3rem;
+
+    @include respond(tablet) {
+      padding: 0;
+    }
+  }
+}
+
+.social-link {
+  color: $white_anti-flash;
 }
 
 .footer {
   font-size: calc(#{$base-font-size} - 1rem);
+  border-top: solid 1px $white_anti-flash--darker;
 }

@@ -24,8 +24,13 @@
   </div>
 
   <div class="sub-footer__phone">
-    <a class="phone btn--green" href="tel:{{ content.field_aboutme_phone }}"> {{ content.field_aboutme_label_phone}}</a>
-    <div class="phone--desktop" {{ content.field_aboutme_label_phone}}
+    <a class="phone btn--green" href="tel:{{ content.field_aboutme_phone }}"> {{ content.field_aboutme_label_phone}}
+    </a>
+    <div class="phone--desktop">{{ content.field_aboutme_label_phone}}</div>
+  </div>
+
+  <div class="sub-footer__social">
+    <a href="{{ content.field_aboutme_fb }}" target="_blank" class="social-link"><i class="fab fa-facebook-square"></i></a>
   </div>
   
 </article>
