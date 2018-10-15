@@ -24,62 +24,19 @@
     z-index: 175;
     opacity: 0;
     width: 0;
+    background: $black_gunmetal--lighter;
     transition: all 0.8s;
-
-    // display: grid;
-    // grid-template-columns: 1fr;
-    // grid-template-rows: repeat(2, auto) 5rem;
-    // grid-template-areas:
-    //   "nav-wrap"
-    //   "nav-branding"
-    //   "nav-footer";
-
-    // @include respond(tablet) {
-    //   grid-template-columns: 1fr 1fr;
-    //   grid-template-rows: auto 5rem;
-    //   grid-template-areas: 
-    //     "nav-wrap nav-branding"
-    //     "nav-footer nav-footer";
-    // }
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  // &__checkbox:checked ~ &__background {
-  //   transform: scale(210);
-  //   background: $black_gunmetal;
-  //   height: 100vh;
-  // }
 
   &__checkbox:checked ~ &__top {
     opacity: 1;
     width: 100%;
     right: 0;
-  }
-
-  &__bottom {
-    height: 50vh;
-    position: fixed;
-    top: 50%;
-    right: -100%;
-    z-index: 175;
-    opacity: 0;
-    width: 0;
-    transition: all 0.8s;
-  }
-
-  &__checkbox:checked ~ &__bottom {
-    opacity: 1;
-    width: 100%;
-    right: 0;
-  }
-
-  // &__wrap {
-  //   grid-area: nav-wrap;
-
-  //   display: grid;
-  //   grid-template-columns: 1fr;
-  //   background: $black_gunmetal--lighter;
-
-  // }
+  }  
 
   &__items {
     align-self: center;
@@ -128,30 +85,46 @@
     }
   }
 
-  &__top {
-    margin: 0 auto;    
-    grid-area: nav-branding;
+  &__bottom {
+    margin: 0 auto;
+    height: 50vh;
+    position: fixed;
+    top: 50%;
+    left: -100%;
+    z-index: 175;
+    opacity: 0;
+    width: 0;
+    background: $black_gunmetal;
+    transition: all .8s;    
 
     display: grid;
-    grid-template-columns: minmax(20vw, 25vw) 1fr;
-    grid-template-rows: 4fr 1fr;
+    grid-template-columns: 5rem minmax(20vw, 25vw) 1fr 5rem;
+    grid-template-rows: 4fr 1fr 5rem;
     grid-template-areas: 
-      "site-avatar site-name"
-      "site-slogan site-slogan";
+      ". site-avatar site-name ."
+      ". site-slogan site-slogan ."
+      "footer footer footer footer";
     grid-column-gap: 2rem;
     align-items: center;
     justify-items: center;
 
     @include respond(tablet) {
       grid-template-columns: 50vw;
-      grid-template-rows: repeat(3, auto);
+      grid-template-rows: repeat(4, auto);
       grid-column-gap: 0;
       grid-row-gap: 2rem;
       grid-template-areas: 
         "site-avatar"
         "site-name"
-        "site-slogan";
+        "site-slogan"
+        "footer";
     }
+  }
+
+  &__checkbox:checked ~ &__bottom {
+    opacity: 1;
+    width: 100%;
+    left: 0;
   }
 
   &__site-avatar {
@@ -186,7 +159,7 @@
     width: 90vw;
     margin: 0 auto;
     text-align: center;
-    grid-area: nav-footer;
+    grid-area: footer;
     align-self: center;
 
     @include respond(tablet) {
