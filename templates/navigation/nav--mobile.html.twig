@@ -7,9 +7,9 @@
 */
  #}
 
-<div class="navigation__background"></div>
+{# <div class="navigation__background"></div> #}
 
-<nav class="navigation__nav">
+<nav class="navigation__top">
   <div class="navigation__wrap">
   
     <div class="navigation__items">
@@ -36,32 +36,32 @@
     </div>
     
   </div>
-  
+</nav>
 
-  <div class="navigation__branding">
+<div class="navigation__bottom">
 
-    <div class="navigation__site-avatar">
-      {# 
-        /**
-        * Block region Profiel foto - content type 'aboutme'  
-        * node--profiel-img.html.twig
-      #}
-      {{ page.profil }}
-    </div>
-
-    <div class="navigation__site-name">
-      <a href="{{ path('<front>') }}">
-        {{ site_name }}
-      </a>
-    </div>
-
-    <div class="navigation__site-slogan">
-      {{ site_slogan }}    
-    </div>
+  <div class="navigation__site-avatar">
+    {# 
+      /**
+      * Block region Profiel foto - content type 'aboutme'  
+      * node--profiel-img.html.twig
+    #}
+    {{ page.profil }}
   </div>
+
+  <div class="navigation__site-name">
+    <a href="{{ path('<front>') }}">
+      {{ site_name }}
+    </a>
+  </div>
+
+  <div class="navigation__site-slogan">
+    {{ site_slogan }}    
+  </div>
+  
 
   <div class="navigation__footer">
     <a href="{{ base_path }}privacyverklaring" class="navigation__footer-link">Privacy</a>
   </div>
 
-</nav>
+</div>

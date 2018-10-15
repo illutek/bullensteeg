@@ -16,8 +16,8 @@
 
   }
 
-  &__nav {
-    height: 100vh;
+  &__top {
+    height: 50vh;
     position: fixed;
     top: 0;
     right: -100%;
@@ -26,43 +26,60 @@
     width: 0;
     transition: all 0.8s;
 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto) 5rem;
-    grid-template-areas:
-      "nav-wrap"
-      "nav-branding"
-      "nav-footer";
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: repeat(2, auto) 5rem;
+    // grid-template-areas:
+    //   "nav-wrap"
+    //   "nav-branding"
+    //   "nav-footer";
 
-    @include respond(tablet) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto 5rem;
-      grid-template-areas: 
-        "nav-wrap nav-branding"
-        "nav-footer nav-footer";
-    }
+    // @include respond(tablet) {
+    //   grid-template-columns: 1fr 1fr;
+    //   grid-template-rows: auto 5rem;
+    //   grid-template-areas: 
+    //     "nav-wrap nav-branding"
+    //     "nav-footer nav-footer";
+    // }
   }
 
-  &__checkbox:checked ~ &__background {
-    transform: scale(210);
-    background: $black_gunmetal;
-    height: 100vh;
-  }
+  // &__checkbox:checked ~ &__background {
+  //   transform: scale(210);
+  //   background: $black_gunmetal;
+  //   height: 100vh;
+  // }
 
-  &__checkbox:checked ~ &__nav {
+  &__checkbox:checked ~ &__top {
     opacity: 1;
     width: 100%;
     right: 0;
   }
 
-  &__wrap {
-    grid-area: nav-wrap;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    background: $black_gunmetal--lighter;
-
+  &__bottom {
+    height: 50vh;
+    position: fixed;
+    top: 50%;
+    right: -100%;
+    z-index: 175;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s;
   }
+
+  &__checkbox:checked ~ &__bottom {
+    opacity: 1;
+    width: 100%;
+    right: 0;
+  }
+
+  // &__wrap {
+  //   grid-area: nav-wrap;
+
+  //   display: grid;
+  //   grid-template-columns: 1fr;
+  //   background: $black_gunmetal--lighter;
+
+  // }
 
   &__items {
     align-self: center;
@@ -111,7 +128,7 @@
     }
   }
 
-  &__branding {
+  &__top {
     margin: 0 auto;    
     grid-area: nav-branding;
 
