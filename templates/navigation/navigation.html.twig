@@ -13,17 +13,11 @@
 
   <div class="navigation">
 
-      <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    {% include directory ~ '/templates/navigation/menu-btn.html.twig' %}
 
-      <label for="navi-toggle" class="navigation__button">
-          <span class="navigation__icon">&nbsp;</span>
-      </label>
+    {% include directory ~ '/templates/navigation/nav--mobile.html.twig' %}
 
-      <div class="navigation__background"></div>
-
-      {% include directory ~ '/templates/navigation/nav--mobile.html.twig' %}
-
-      {% include directory ~ '/templates/navigation/nav--desktop.html.twig' %}
+    {% include directory ~ '/templates/navigation/nav--desktop.html.twig' %}
 
   </div>
   
