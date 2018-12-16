@@ -1,8 +1,18 @@
 ## Bullensteeg
 
-Theme construction from mobile first. No framework all done with css-grid.
+Theme construction from mobile first. No css-framework, all done with css-grid.
 
 ### BEM
+Block Element Modifier, BEM methodology gives your CSS code a solid structure that remains simple and easy to understand.
+
+### SASS
+Gulp as to compile & manage sass.
+
+### Bower
+Package manager for Font-awesome, animate.css and wow.
+
+### NPM
+Package manager for devDependencies.
 
 ### Drupal8
 

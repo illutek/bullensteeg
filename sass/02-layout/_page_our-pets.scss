@@ -2,6 +2,8 @@
 // @@ PAGE OUR PETS
 // ////////////////////////
 
+// views/views-view--onze-teven.html.twig
+// views/views-view--onze-reuen.html.twig
 .our-pets {
   &__container {
     margin: 6rem auto 8rem;
@@ -15,6 +17,8 @@
   }
 }
 
+// views/views-view--onze-teven.html.twig
+// views/views-view--onze-reuen.html.twig 
 .section-our-pets {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
@@ -22,6 +26,7 @@
   grid-row-gap: 5rem;
 }
 
+// content/node--our-pets--teaser.html.twig
 .pet-panel {
   display: grid;
   grid-template-columns: 10% 80% 10%;
