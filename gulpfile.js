@@ -1,16 +1,12 @@
 /**
- *  * Created by stefan on 17.10.17.
- *   * gulp-clean is replaced by gulp-rimraf
- *    * http://learningwithjb.com/posts/cleaning-our-build-folder-with-gulp
- *     */
+ * Created by stefan on 17.10.17.
+ * gulp-clean is replaced by gulp-rimraf
+ * http://learningwithjb.com/posts/cleaning-our-build-folder-with-gulp
+ *     
+ */
 
 /* jshint node: true */
 "use strict";
-
-/**
- *  *
- *   * @type {*}
- *    */
 
 const gulp = require('gulp'),
       prettyError = require('gulp-prettyerror'),
@@ -23,17 +19,18 @@ const gulp = require('gulp'),
       rimraf = require('rimraf')
 
 /**
- *  *
- *   * @type {{dist: {bower: string, html: string, php: string, js: string, css: string, img: string, fonts: string},
- *    * src: {bower: string, twig: string, yml: string, theme: string, js: string, style: string, img: string,
- *     * fonts: string}, watch: {twig: string, yml: string, theme: string, js: string, style: string, img: string,
- *      * fonts: string}, clean: string}}
- *       */
-
+ *
+ * @type {{dist: {bower: string, html: string, php: string, js: string, css: string, img: string, fonts: string},
+ * src: {bower: string, twig: string, yml: string, theme: string, js: string, style: string, img: string,
+ * fonts: string}, watch: {twig: string, yml: string, theme: string, js: string, style: string, img: string,
+ * fonts: string}, clean: string}}
+ * 
+*/
 
 /**
- *  * Variables
- *   */
+ * Variables
+ *   
+*/
 const path = {
     dist: {
         bower:'dist/bower_components/',
@@ -70,16 +67,18 @@ const path = {
 };
 
 /**
- *  * clean task
- *   */
+ * clean task
+ *   
+*/
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
 
 /**
- *  * task
- *   */
+ * task
+ *   
+*/
 gulp.task('bower:dist', function () {
     gulp.src(path.src.bower)
         .pipe(gulp.dest(path.dist.bower));
@@ -157,8 +156,9 @@ gulp.task('dist', [
 ]);
 
 /**
- *  * Watch
- *   */
+ * Watch
+ *   
+*/
 
 gulp.task('watch', function(){
     watch([path.watch.twig], function(event, cb) {
