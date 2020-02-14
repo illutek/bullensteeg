@@ -1,7 +1,7 @@
 globalstyle:
   css:
     theme:
-      css/styles.css: {}
+      dist/css/styles.css: {}
 
 fonts:
   license:
@@ -10,30 +10,3 @@ fonts:
   css:
     theme:
       '//fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet': { type: external, minified: true }
-
-animatestyle:
-  css:
-    theme:
-      bower_components/animate.css/animate.css: {}
-
-email:
-  header: true
-  js:
-    js/email.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal.ajax
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery.once
-      
-frontjs:
-  js:
-    bower_components/wow/dist/wow.min.js: {}
-    js/wow-init.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal.ajax
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery.once
